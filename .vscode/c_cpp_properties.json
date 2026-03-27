@@ -14,7 +14,7 @@
     "configurations": [
         {
             "name": "MTB",
-            "compilerPath": "/Applications/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-gcc",
+            "compilerPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-gcc",
             "compilerArgs": [
                 "${mtbCompilerArgs}"
             ],

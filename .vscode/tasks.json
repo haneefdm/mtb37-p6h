@@ -10,7 +10,7 @@
             "args": [
                 "--norc",
                 "-c",
-                "make -j10 build"
+                "make -j12 build"
             ],
 
             "windows" : {
@@ -18,7 +18,7 @@
                 "args": [
                     "--norc",
                     "-c",
-                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j10 build"
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j12 build"
                 ]
             },
             "problemMatcher": "$gcc",
@@ -64,7 +64,7 @@
             "args": [
                 "--norc",
                 "-c",
-                "make -j10 program"
+                "make -j12 program"
             ],
 
             "windows" : {
@@ -72,7 +72,7 @@
                 "args": [
                     "--norc",
                     "-c",
-                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j10 program"
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j12 program"
                 ]
             },
             "problemMatcher": "$gcc",
@@ -87,7 +87,7 @@
             "args": [
                 "--norc",
                 "-c",
-                "make -j10 erase"
+                "make -j12 erase"
             ],
 
             "windows" : {
@@ -95,7 +95,7 @@
                 "args": [
                     "--norc",
                     "-c",
-                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j10 erase"
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j12 erase"
                 ]
             },
             "group": {

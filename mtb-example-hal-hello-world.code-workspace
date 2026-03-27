@@ -18,16 +18,12 @@
         //mtb//      macOS  : $HOME/Library/Application Support/Code/User/settings.json
         //mtb//      Linux  : $HOME/.config/Code/User/settings.json
         //mtb//
-        "modustoolbox.toolsPath": "/Applications/ModusToolbox/tools_3.7",
-        "cortex-debug.armToolchainPath": "/Applications/mtb-gcc-arm-eabi/14.2.1/gcc/bin",
+        "modustoolbox.toolsPath": "/opt/Tools/ModusToolbox/tools_3.7",
+        "cortex-debug.armToolchainPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin",
         "cortex-debug.openocdPath": "${config:modustoolbox.toolsPath}/../../ModusToolboxProgtools-1.7/openocd/bin/openocd",
-        "cortex-debug.JLinkGDBServerPath.windows": "/Applications/SEGGER/JLink/JLinkGDBServerCLExe",
+        "cortex-debug.JLinkGDBServerPath.windows": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
         "cortex-debug.JLinkGDBServerPath.osx": "/Applications/SEGGER/JLink/JLinkGDBServerCLExe",
-        "cortex-debug.JLinkGDBServerPath.linux": "/Applications/SEGGER/JLink/JLinkGDBServerCLExe",
-        "clangd.arguments": [
-            "--background-index",
-            "--query-driver=/Applications/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-*"
-        ]
+        "cortex-debug.JLinkGDBServerPath.linux": "JLinkGDBServerCLExe"
     },
     "extensions": {
         "recommendations": [ "marus25.cortex-debug", "ms-vscode.cpptools", "dan-c-underwood.arm" ]

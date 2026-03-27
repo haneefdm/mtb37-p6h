@@ -1,0 +1,50 @@
+{
+    "name": "MTB Hello World",
+    // Two-layer build: base image (mtb-tools:3.7-base) has all Infineon tools,
+    // this Dockerfile adds the devcontainer layer (vscode user, PATH, mtb_shared)
+    "build": {
+        "dockerfile": "Dockerfile",
+        "options": ["--platform=linux/amd64"]
+    },
+
+    // Infineon tools are x86_64-only; runs under Rosetta on Apple Silicon Macs
+    "runArgs": ["--platform=linux/amd64"],
+
+    // Persist mtb_shared across container rebuilds (avoids slow re-download)
+    "mounts": [
+        "source=mtb-shared-cache,target=/workspaces/mtb_shared,type=volume"
+    ],
+
+    // VS Code extensions to install inside the container
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "dan-c-underwood.arm",
+                "llvm-vs-code-extensions.vscode-clangd",
+                "mcu-debug.debug-tracker-vscode",
+                "mcu-debug.memory-view",
+                "mcu-debug.rtos-views",
+                "mcu-debug.peripheral-viewer",
+                "marus25.cortex-debug"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "modustoolbox.toolsPath": "/opt/Tools/ModusToolbox/tools_3.7",
+                "cortex-debug.armToolchainPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin",
+                "cortex-debug.openocdPath": "/opt/Tools/ModusToolboxProgtools-1.7/openocd/bin/openocd",
+                "mcu-debug.armToolchainPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin",
+                "mcu-debug.openocdPath": "/opt/Tools/ModusToolboxProgtools-1.7/openocd/bin/openocd"
+            }
+        }
+    },
+
+    // Run as the non-root user created in the Dockerfile
+    "remoteUser": "vscode",
+
+    // Where the workspace is mounted inside the container
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+    // First-time setup: populate libraries, regenerate VS Code configs, verify build
+    "postCreateCommand": "make getlibs && make vscode && make build -j$(nproc)"
+}
