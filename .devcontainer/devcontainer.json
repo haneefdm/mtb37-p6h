@@ -45,6 +45,6 @@
     // Where the workspace is mounted inside the container
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-    // First-time setup: populate libraries, regenerate VS Code configs, verify build
-    "postCreateCommand": "make getlibs && make vscode && make build -j$(nproc)"
+    // First-time setup: add BSP if missing, populate libraries, regenerate VS Code configs, verify build
+    "postCreateCommand": "bash .devcontainer/setup.sh"
 }
