@@ -12,6 +12,7 @@
 
     // Persist mtb_shared across container rebuilds (avoids slow re-download)
     "mounts": [
+        "source=/Users/hdm/src/mcu-debug,target=/workspaces/mcu-debug,type=bind",
         "source=mtb-shared-cache,target=/workspaces/mtb_shared,type=volume"
     ],
 
