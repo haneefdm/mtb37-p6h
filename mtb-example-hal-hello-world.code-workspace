@@ -6,6 +6,10 @@
 		},
 		{
 			"path": "../mtb_shared"
+		},
+		{
+			"path": "/workspaces/mcu-debug",
+			"name": "mcu-debug (dev)"
 		}
     ],
     "settings": {
@@ -20,7 +24,7 @@
         //mtb//
         "modustoolbox.toolsPath": "/opt/Tools/ModusToolbox/tools_3.7",
         "cortex-debug.armToolchainPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin",
-        "cortex-debug.openocdPath": "${config:modustoolbox.toolsPath}/../../ModusToolboxProgtools-1.7/openocd/bin/openocd",
+        "cortex-debug.openocdPath": "/Applications/ModusToolboxProgtools-1.7/openocd/bin/openocd",
         "cortex-debug.JLinkGDBServerPath.windows": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
         "cortex-debug.JLinkGDBServerPath.osx": "/Applications/SEGGER/JLink/JLinkGDBServerCLExe",
         "cortex-debug.JLinkGDBServerPath.linux": "JLinkGDBServerCLExe",

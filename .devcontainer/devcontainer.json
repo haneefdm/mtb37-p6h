@@ -27,15 +27,16 @@
                 "mcu-debug.memory-view",
                 "mcu-debug.rtos-views",
                 "mcu-debug.peripheral-viewer",
-                "marus25.cortex-debug"
+                "marus25.cortex-debug",
+                "rust-lang.rust-analyzer",
+                "vadimcn.vscode-lldb"
             ],
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "bash",
                 "modustoolbox.toolsPath": "/opt/Tools/ModusToolbox/tools_3.7",
                 "cortex-debug.armToolchainPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin",
                 "cortex-debug.openocdPath": "/opt/Tools/ModusToolboxProgtools-1.7/openocd/bin/openocd",
-                "mcu-debug.armToolchainPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin",
-                "mcu-debug.openocdPath": "/opt/Tools/ModusToolboxProgtools-1.7/openocd/bin/openocd"
+                "mcu-debug.armToolchainPath": "/opt/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin"
             }
         }
     },
