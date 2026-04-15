@@ -8,7 +8,7 @@
     },
 
     // Infineon tools are x86_64-only; runs under Rosetta on Apple Silicon Macs
-    "runArgs": ["--platform=linux/amd64"],
+    "runArgs": ["--platform=linux/amd64", "-p", "2222:22"],
 
     // Persist mtb_shared across container rebuilds (avoids slow re-download)
     "mounts": [
@@ -48,5 +48,8 @@
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
     // First-time setup: add BSP if missing, populate libraries, regenerate VS Code configs, verify build
-    "postCreateCommand": "bash .devcontainer/setup.sh"
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+
+    // Start sshd and apply persisted experiment key on container start.
+    "postStartCommand": "bash .devcontainer/start-sshd.sh"
 }

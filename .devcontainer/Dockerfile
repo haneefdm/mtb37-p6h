@@ -12,6 +12,12 @@ FROM hdmdocker/mtb-tools:3.7-base
 # Newer base images may default to a non-root user; switch to root for setup.
 USER root
 
+# Install OpenSSH server for container-side SSH experiments.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends openssh-server \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p /run/sshd
+
 # ── Non-root user for VS Code ────────────────────────────────────────────────
 ARG USERNAME=vscode
 ARG USER_UID=1000
